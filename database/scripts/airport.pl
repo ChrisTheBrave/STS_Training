@@ -10,3 +10,10 @@ use warnings;
 use strict;
 use feature "state";
 use diagnostics;
+
+my $airport_id = 10;
+
+for ($airport_id = 0; $airport_id < 30; $airport_id++) {
+  print "INSERT INTO tbl_airport (airport_id, airport_name, airport_location, capacity, international_flag, airport_code, insert_date, update_date)\n";
+  print "VALUES ($airport_id, 'Ronald Reagan Washington National Airport','Arlington, VA 22202', '23,595,006', TRUE, 'DCA', NOW(), NULL);\n";
+}
