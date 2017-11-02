@@ -1,0 +1,2 @@
+INSERT INTO tbl_person(person_id, last_name, first_name, dob, ssn, pob, gender, insert_date, update_date)
+VALUES(14, 'Williams', 'Aaron', '1967-03-28', '121-21-2121', 'Waldorf, MD', 'M', NOW(), NULL);
