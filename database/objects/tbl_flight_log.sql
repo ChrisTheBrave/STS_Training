@@ -1,6 +1,6 @@
 use sts_training;
 
-CREATE TABLE IF NOT EXISTS tbl_person_flight (
+CREATE TABLE IF NOT EXISTS tbl_flight_log (
 	flight_id int,
 	flight_date date,
   actual_departure_time varchar(255),
