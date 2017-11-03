@@ -6,6 +6,8 @@ CREATE TABLE IF NOT EXISTS tbl_flight (
 	destination_airport_id int,
 	plane_type varchar(255),
 	airline_name varchar(255),
+	scheduled_arrival_time varchar(255),
+	scheduled_departure_time varchar(255),
 	insert_date datetime,
 	update_date datetime
 );
