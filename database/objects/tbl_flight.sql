@@ -6,8 +6,6 @@ CREATE TABLE IF NOT EXISTS tbl_flight (
 	destination_airport_id int,
 	plane_type varchar(255),
 	airline_name varchar(255),
-	scheduled_departure_time varchar(255),
-	scheduled_arrival_time varchar(255),
 	insert_date datetime,
 	update_date datetime
 );
@@ -26,3 +24,8 @@ ADD FOREIGN KEY fk_destination_airport(destination_airport_id)
 REFERENCES tbl_airport(airport_id);
 #ON DELETE SET NULL
 #ON UPDATE CASCADE;
+
+ALTER TABLE tbl_flight
+ADD COLUMN scheduled_arrival_time varchar(255),
+ADD COLUMN scheduled_departure_time varchar(255)
+AFTER airline_name;
