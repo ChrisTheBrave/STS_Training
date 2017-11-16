@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 # Filename: person.pl (located in the scripts directory) points to tbl_person_script.sql
-# Description: This file allows a perl script to create a list of 100 names to be added to the table tbl_person. 
+# Description: This file allows a perl script to create a list of 100 names to be added to the table tbl_person.
 # Author: Christine Ash
 # Date: 1 November 2017
 
@@ -13,10 +13,112 @@ use diagnostics;
 
 
 my $person_id;
-my $person_id_start = 915;
-my $person_id_end = 1014;
+my $person_id_start = 1015;
+my $person_id_end = 1114;
 
+my @first_names;
 my @last_names;
+
+$first_names[0] = 'Graham';
+$first_names[1] = 'Madden';
+$first_names[2] = 'Daniel';
+$first_names[3] = 'Stuart';
+$first_names[4] = 'Lang';
+$first_names[5] = 'Mcdaniel';
+$first_names[6] = 'Fletcher';
+$first_names[7] = 'Barr';
+$first_names[8] = 'Sharp';
+$first_names[9] = 'Meza';
+$first_names[10] = 'Farley';
+$first_names[11] = 'Rodgers';
+$first_names[12] = 'Reeves';
+$first_names[13] = 'Hendricks';
+$first_names[14] = 'Savage';
+$first_names[15] = 'Erickson';
+$first_names[16] = 'Barrera';
+$first_names[17] = 'Frazier';
+$first_names[18] = 'Bell';
+$first_names[19] = 'Ochoa';
+$first_names[20] = 'Blake';
+$first_names[21] = 'Guzman';
+$first_names[22] = 'Shepherd';
+$first_names[23] = 'Watts';
+$first_names[24] = 'Carson';
+$first_names[25] = 'Travis';
+$first_names[26] = 'Cowan';
+$first_names[27] = 'Webster';
+$first_names[28] = 'Simmons';
+$first_names[29] = 'Best';
+$first_names[30] = 'Garner';
+$first_names[31] = 'Walsh';
+$first_names[32] = 'Becker';
+$first_names[33] = 'Hatfield';
+$first_names[34] = 'York';
+$first_names[35] = 'Branch';
+$first_names[36] = 'Fowler';
+$first_names[37] = 'Drake';
+$first_names[38] = 'Wiggins';
+$first_names[39] = 'Gross';
+$first_names[40] = 'Curiel';
+$first_names[41] = 'Ash';
+$first_names[42] = 'Wiggins';
+$first_names[43] = 'Schnider';
+$first_names[44] = 'Test';
+$first_names[45] = 'Stoopler';
+$first_names[46] = 'Jaku';
+$first_names[47] = 'Elderberry';
+$first_names[48] = 'Hicks';
+$first_names[49] = 'Bunn';
+$first_names[50] = 'Neal';
+$first_names[51] = 'Beasley';
+$first_names[52] = 'Mcconnell';
+$first_names[53] = 'Petersen';
+$first_names[54] = 'Castro';
+$first_names[55] = 'Hampton';
+$first_names[56] = 'Mills';
+$first_names[57] = 'Shaffer';
+$first_names[58] = 'Jenkins';
+$first_names[59] = 'Velez';
+$first_names[60] = 'Stephens';
+$first_names[61] = 'Yang';
+$first_names[62] = 'Warren';
+$first_names[63] = 'Rich';
+$first_names[64] = 'Mitchell';
+$first_names[65] = 'May';
+$first_names[66] = 'Peterson';
+$first_names[67] = 'Stout';
+$first_names[68] = 'Shannon';
+$first_names[69] = 'Petty';
+$first_names[70] = 'Hurley';
+$first_names[71] = 'Norton';
+$first_names[72] = 'Jimenez';
+$first_names[73] = 'Moore';
+$first_names[74] = 'Stewart';
+$first_names[75] = 'Harris';
+$first_names[76] = 'Zuniga';
+$first_names[77] = 'Franklin';
+$first_names[78] = 'Barron';
+$first_names[79] = 'Small';
+$first_names[80] = 'Haney';
+$first_names[81] = 'Woodward';
+$first_names[82] = 'Summers';
+$first_names[83] = 'Martinez';
+$first_names[84] = 'Patterson';
+$first_names[85] = 'Mason';
+$first_names[86] = 'Kerr';
+$first_names[87] = 'Bradshaw';
+$first_names[88] = 'Blackburn';
+$first_names[89] = 'Munoz';
+$first_names[90] = 'Avery';
+$first_names[91] = 'Dalton';
+$first_names[92] = 'Winters';
+$first_names[93] = 'Galvan';
+$first_names[94] = 'Love';
+$first_names[95] = 'Melton';
+$first_names[96] = 'Schwartz';
+$first_names[97] = 'Park';
+$first_names[98] = 'Livingston';
+$first_names[99] = 'Mcgrath';
 
 $last_names[0] = 'Graham';
 $last_names[1] = 'Madden';
@@ -123,5 +225,5 @@ $last_names[99] = 'Mcgrath';
 for ($person_id = 0; $person_id < ($person_id_end - $person_id_start); $person_id++) {
   my $y = ($person_id_start + $person_id);
   print "INSERT INTO tbl_person(person_id, last_name, first_name, dob, ssn, pob, gender, insert_date, update_date)\n";
-  print "VALUES($y, '$last_names[$person_id]', 'Paul', '1967-03-28', '121-21-2121', 'Waldorf, MD', 'M', NOW(), NULL);\n";
+  print "VALUES($y, '$last_names[$person_id]', '$first_names[$person_id]', '1967-03-28', '121-21-2121', 'Waldorf, MD', 'M', NOW(), NULL);\n";
 }
