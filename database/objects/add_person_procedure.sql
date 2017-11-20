@@ -1,9 +1,9 @@
---  Filename: add_person_procedure.sql (located in the objects directory) points to tbl_person.sql
---  Description: This file is MySQL stored procedure that allows the addition of new data to tbl_person
---  based on the max number in the person_id column. It will add one to that number along with creating
---  a new row for each new entry.
---  Author: Christine Ash
---  Date: 20 November 2017
+--Filename: add_person_procedure.sql (located in the objects directory) points to tbl_person.sql
+--Description: This file is MySQL stored procedure that allows the addition of new data to tbl_person
+--based on the max number in the person_id column. It will add one to that number along with creating
+--a new row for each new entry.
+--Author: Christine Ash
+--Date: 20 November 2017
 use sts_training;
 
 
