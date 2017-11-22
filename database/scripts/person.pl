@@ -2,6 +2,7 @@
 
 # Filename: person.pl (located in the scripts directory) points to tbl_person_script.sql
 # Description: This file allows a perl script to create a list of 100 names to be added to the table tbl_person.
+# Generates call statement that create rows with different ids, though the names stay the same.
 # Author: Christine Ash
 # Date: 1 November 2017
 
@@ -13,14 +14,14 @@ use diagnostics;
 
 
 my $person_id;
-my $person_id_start = 1015;
-my $person_id_end = 1114;
-
+# my $person_id_start;
+# my $person_id_end;
+#
 my @first_names;
 my @last_names;
-
-$first_names[0] = 'Graham';
-$first_names[1] = 'Madden';
+#
+$first_names[0] = 'Ty';
+$first_names[1] = 'Leroy';
 $first_names[2] = 'Daniel';
 $first_names[3] = 'Stuart';
 $first_names[4] = 'Lang';
@@ -222,8 +223,6 @@ $last_names[98] = 'Livingston';
 $last_names[99] = 'Mcgrath';
 
 
-for ($person_id = 0; $person_id < ($person_id_end - $person_id_start); $person_id++) {
-  my $y = ($person_id_start + $person_id);
-  print "INSERT INTO tbl_person(person_id, last_name, first_name, dob, ssn, pob, gender, insert_date, update_date)\n";
-  print "VALUES($y, '$last_names[$person_id]', '$first_names[$person_id]', '1967-03-28', '121-21-2121', 'Waldorf, MD', 'M', NOW(), NULL);\n";
+for ($person_id = 0; $person_id < 100;  $person_id++) {
+  print "CALL add_person('$last_names[$person_id]', '$first_names[$person_id]', '1967-03-28', '121-21-2121', 'Waldorf, MD', 'M');\n";
 }
